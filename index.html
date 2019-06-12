@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkNameClass(name) {
+        regexp = /^[_(A,C,P)]{1}[_0-9]{4}[_(G,H,I,K,L,M)]{1}$/;
+        if (regexp.test(name)){
+            return true;
+        }
+        return false;
+    }
+
+    let nameClass = ['C0318G', 'M0318G', 'P0323A'];
+
+    for (i = 0; i < nameClass.length; i++) {
+        document.writeln(nameClass[i] + ' == ' + checkNameClass(nameClass[i]) + '<br/>');
+    }
+</script>
+</body>
+</html>
